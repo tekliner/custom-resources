@@ -4,7 +4,7 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"kmodules.xyz/custom-resources/apis/appcatalog"
+	"github.com/tekliner/custom-resources/apis/appcatalog"
 )
 
 var SchemeGroupVersion = schema.GroupVersion{Group: appcatalog.GroupName, Version: "v1alpha1"}

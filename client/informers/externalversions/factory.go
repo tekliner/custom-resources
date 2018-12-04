@@ -27,9 +27,9 @@ import (
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	cache "k8s.io/client-go/tools/cache"
-	versioned "kmodules.xyz/custom-resources/client/clientset/versioned"
-	appcatalog "kmodules.xyz/custom-resources/client/informers/externalversions/appcatalog"
-	internalinterfaces "kmodules.xyz/custom-resources/client/informers/externalversions/internalinterfaces"
+	versioned "github.com/tekliner/custom-resources/client/clientset/versioned"
+	appcatalog "github.com/tekliner/custom-resources/client/informers/externalversions/appcatalog"
+	internalinterfaces "github.com/tekliner/custom-resources/client/informers/externalversions/internalinterfaces"
 )
 
 // SharedInformerOption defines the functional option type for SharedInformerFactory.

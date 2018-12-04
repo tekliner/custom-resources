@@ -25,7 +25,7 @@ import (
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
 	testing "k8s.io/client-go/testing"
-	v1alpha1 "kmodules.xyz/custom-resources/apis/appcatalog/v1alpha1"
+	v1alpha1 "github.com/tekliner/custom-resources/apis/appcatalog/v1alpha1"
 )
 
 // FakeAppBindings implements AppBindingInterface

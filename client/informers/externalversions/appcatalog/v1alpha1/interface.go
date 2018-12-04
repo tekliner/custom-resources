@@ -19,7 +19,7 @@ limitations under the License.
 package v1alpha1
 
 import (
-	internalinterfaces "kmodules.xyz/custom-resources/client/informers/externalversions/internalinterfaces"
+	internalinterfaces "github.com/tekliner/custom-resources/client/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to all the informers in this group version.

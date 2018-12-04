@@ -24,7 +24,7 @@ import (
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	serializer "k8s.io/apimachinery/pkg/runtime/serializer"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
-	appcatalogv1alpha1 "kmodules.xyz/custom-resources/apis/appcatalog/v1alpha1"
+	appcatalogv1alpha1 "github.com/tekliner/custom-resources/apis/appcatalog/v1alpha1"
 )
 
 var scheme = runtime.NewScheme()

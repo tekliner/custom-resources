@@ -24,9 +24,9 @@ import (
 	"k8s.io/client-go/discovery"
 	fakediscovery "k8s.io/client-go/discovery/fake"
 	"k8s.io/client-go/testing"
-	clientset "kmodules.xyz/custom-resources/client/clientset/versioned"
-	appcatalogv1alpha1 "kmodules.xyz/custom-resources/client/clientset/versioned/typed/appcatalog/v1alpha1"
-	fakeappcatalogv1alpha1 "kmodules.xyz/custom-resources/client/clientset/versioned/typed/appcatalog/v1alpha1/fake"
+	clientset "github.com/tekliner/custom-resources/client/clientset/versioned"
+	appcatalogv1alpha1 "github.com/tekliner/custom-resources/client/clientset/versioned/typed/appcatalog/v1alpha1"
+	fakeappcatalogv1alpha1 "github.com/tekliner/custom-resources/client/clientset/versioned/typed/appcatalog/v1alpha1/fake"
 )
 
 // NewSimpleClientset returns a clientset that will respond with the provided objects.

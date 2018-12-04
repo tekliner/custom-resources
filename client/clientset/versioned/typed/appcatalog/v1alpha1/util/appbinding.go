@@ -10,8 +10,8 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/apimachinery/pkg/util/jsonmergepatch"
 	"k8s.io/apimachinery/pkg/util/wait"
-	api "kmodules.xyz/custom-resources/apis/appcatalog/v1alpha1"
-	cs "kmodules.xyz/custom-resources/client/clientset/versioned/typed/appcatalog/v1alpha1"
+	api "github.com/tekliner/custom-resources/apis/appcatalog/v1alpha1"
+	cs "github.com/tekliner/custom-resources/client/clientset/versioned/typed/appcatalog/v1alpha1"
 )
 
 func CreateOrPatchAppBinding(c cs.AppcatalogV1alpha1Interface, meta metav1.ObjectMeta, transform func(*api.AppBinding) *api.AppBinding) (*api.AppBinding, kutil.VerbType, error) {

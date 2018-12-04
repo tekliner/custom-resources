@@ -12,9 +12,9 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 	"k8s.io/kube-openapi/pkg/common"
-	"kmodules.xyz/custom-resources/apis"
-	cataloginstall "kmodules.xyz/custom-resources/apis/appcatalog/install"
-	catalog "kmodules.xyz/custom-resources/apis/appcatalog/v1alpha1"
+	"github.com/tekliner/custom-resources/apis"
+	cataloginstall "github.com/tekliner/custom-resources/apis/appcatalog/install"
+	catalog "github.com/tekliner/custom-resources/apis/appcatalog/v1alpha1"
 	"os"
 	"path/filepath"
 )
@@ -22,7 +22,7 @@ import (
 func generateCRDDefinitions() {
 	apis.EnableStatusSubresource = true
 
-	err := os.MkdirAll(filepath.Join(gort.GOPath(), "/src/kmodules.xyz/custom-resources/api/crds"), 0755)
+	err := os.MkdirAll(filepath.Join(gort.GOPath(), "/src/github.com/tekliner/custom-resources/api/crds"), 0755)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -31,7 +31,7 @@ func generateCRDDefinitions() {
 		catalog.AppBinding{}.CustomResourceDefinition(),
 	}
 	for _, crd := range crds {
-		filename := filepath.Join(gort.GOPath(), "/src/kmodules.xyz/custom-resources/api/crds", crd.Spec.Names.Singular+".yaml")
+		filename := filepath.Join(gort.GOPath(), "/src/github.com/tekliner/custom-resources/api/crds", crd.Spec.Names.Singular+".yaml")
 		f, err := os.OpenFile(filename, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0644)
 		if err != nil {
 			log.Fatal(err)
@@ -76,7 +76,7 @@ func generateSwaggerJson() {
 		glog.Fatal(err)
 	}
 
-	filename := gort.GOPath() + "/src/kmodules.xyz/custom-resources/api/openapi-spec/swagger.json"
+	filename := gort.GOPath() + "/src/github.com/tekliner/custom-resources/api/openapi-spec/swagger.json"
 	err = os.MkdirAll(filepath.Dir(filename), 0755)
 	if err != nil {
 		glog.Fatal(err)

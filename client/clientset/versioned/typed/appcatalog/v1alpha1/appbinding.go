@@ -23,8 +23,8 @@ import (
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
 	rest "k8s.io/client-go/rest"
-	v1alpha1 "kmodules.xyz/custom-resources/apis/appcatalog/v1alpha1"
-	scheme "kmodules.xyz/custom-resources/client/clientset/versioned/scheme"
+	v1alpha1 "github.com/tekliner/custom-resources/apis/appcatalog/v1alpha1"
+	scheme "github.com/tekliner/custom-resources/client/clientset/versioned/scheme"
 )
 
 // AppBindingsGetter has a method to return a AppBindingInterface.

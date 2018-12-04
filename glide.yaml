@@ -1,4 +1,4 @@
-package: kmodules.xyz/custom-resources
+package: github.com/tekliner/custom-resources
 import:
 - package: github.com/appscode/go
   version: master

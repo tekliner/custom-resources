@@ -301,12 +301,12 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		"k8s.io/apimachinery/pkg/runtime.Unknown":                                 schema_k8sio_apimachinery_pkg_runtime_Unknown(ref),
 		"k8s.io/apimachinery/pkg/util/intstr.IntOrString":                         schema_apimachinery_pkg_util_intstr_IntOrString(ref),
 		"k8s.io/apimachinery/pkg/version.Info":                                    schema_k8sio_apimachinery_pkg_version_Info(ref),
-		"kmodules.xyz/custom-resources/apis/appcatalog/v1alpha1.AppBinding":       schema_custom_resources_apis_appcatalog_v1alpha1_AppBinding(ref),
-		"kmodules.xyz/custom-resources/apis/appcatalog/v1alpha1.AppBindingList":   schema_custom_resources_apis_appcatalog_v1alpha1_AppBindingList(ref),
-		"kmodules.xyz/custom-resources/apis/appcatalog/v1alpha1.AppBindingSpec":   schema_custom_resources_apis_appcatalog_v1alpha1_AppBindingSpec(ref),
-		"kmodules.xyz/custom-resources/apis/appcatalog/v1alpha1.AppReference":     schema_custom_resources_apis_appcatalog_v1alpha1_AppReference(ref),
-		"kmodules.xyz/custom-resources/apis/appcatalog/v1alpha1.ClientConfig":     schema_custom_resources_apis_appcatalog_v1alpha1_ClientConfig(ref),
-		"kmodules.xyz/custom-resources/apis/appcatalog/v1alpha1.ServiceReference": schema_custom_resources_apis_appcatalog_v1alpha1_ServiceReference(ref),
+		"github.com/tekliner/custom-resources/apis/appcatalog/v1alpha1.AppBinding":       schema_custom_resources_apis_appcatalog_v1alpha1_AppBinding(ref),
+		"github.com/tekliner/custom-resources/apis/appcatalog/v1alpha1.AppBindingList":   schema_custom_resources_apis_appcatalog_v1alpha1_AppBindingList(ref),
+		"github.com/tekliner/custom-resources/apis/appcatalog/v1alpha1.AppBindingSpec":   schema_custom_resources_apis_appcatalog_v1alpha1_AppBindingSpec(ref),
+		"github.com/tekliner/custom-resources/apis/appcatalog/v1alpha1.AppReference":     schema_custom_resources_apis_appcatalog_v1alpha1_AppReference(ref),
+		"github.com/tekliner/custom-resources/apis/appcatalog/v1alpha1.ClientConfig":     schema_custom_resources_apis_appcatalog_v1alpha1_ClientConfig(ref),
+		"github.com/tekliner/custom-resources/apis/appcatalog/v1alpha1.ServiceReference": schema_custom_resources_apis_appcatalog_v1alpha1_ServiceReference(ref),
 	}
 }
 
@@ -13284,14 +13284,14 @@ func schema_custom_resources_apis_appcatalog_v1alpha1_AppBinding(ref common.Refe
 					},
 					"spec": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("kmodules.xyz/custom-resources/apis/appcatalog/v1alpha1.AppBindingSpec"),
+							Ref: ref("github.com/tekliner/custom-resources/apis/appcatalog/v1alpha1.AppBindingSpec"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta", "kmodules.xyz/custom-resources/apis/appcatalog/v1alpha1.AppBindingSpec"},
+			"k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta", "github.com/tekliner/custom-resources/apis/appcatalog/v1alpha1.AppBindingSpec"},
 	}
 }
 
@@ -13327,7 +13327,7 @@ func schema_custom_resources_apis_appcatalog_v1alpha1_AppBindingList(ref common.
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("kmodules.xyz/custom-resources/apis/appcatalog/v1alpha1.AppBinding"),
+										Ref: ref("github.com/tekliner/custom-resources/apis/appcatalog/v1alpha1.AppBinding"),
 									},
 								},
 							},
@@ -13337,7 +13337,7 @@ func schema_custom_resources_apis_appcatalog_v1alpha1_AppBindingList(ref common.
 			},
 		},
 		Dependencies: []string{
-			"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta", "kmodules.xyz/custom-resources/apis/appcatalog/v1alpha1.AppBinding"},
+			"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta", "github.com/tekliner/custom-resources/apis/appcatalog/v1alpha1.AppBinding"},
 	}
 }
 
@@ -13357,7 +13357,7 @@ func schema_custom_resources_apis_appcatalog_v1alpha1_AppBindingSpec(ref common.
 					"clientConfig": {
 						SchemaProps: spec.SchemaProps{
 							Description: "ClientConfig defines how to communicate with the app. Required",
-							Ref:         ref("kmodules.xyz/custom-resources/apis/appcatalog/v1alpha1.ClientConfig"),
+							Ref:         ref("github.com/tekliner/custom-resources/apis/appcatalog/v1alpha1.ClientConfig"),
 						},
 					},
 					"secret": {
@@ -13377,7 +13377,7 @@ func schema_custom_resources_apis_appcatalog_v1alpha1_AppBindingSpec(ref common.
 			},
 		},
 		Dependencies: []string{
-			"k8s.io/api/core/v1.LocalObjectReference", "k8s.io/apimachinery/pkg/runtime.RawExtension", "kmodules.xyz/custom-resources/apis/appcatalog/v1alpha1.ClientConfig"},
+			"k8s.io/api/core/v1.LocalObjectReference", "k8s.io/apimachinery/pkg/runtime.RawExtension", "github.com/tekliner/custom-resources/apis/appcatalog/v1alpha1.ClientConfig"},
 	}
 }
 
@@ -13431,7 +13431,7 @@ func schema_custom_resources_apis_appcatalog_v1alpha1_ClientConfig(ref common.Re
 					"service": {
 						SchemaProps: spec.SchemaProps{
 							Description: "`service` is a reference to the service for this app. Either `service` or `url` must be specified.\n\nIf the webhook is running within the cluster, then you should use `service`.",
-							Ref:         ref("kmodules.xyz/custom-resources/apis/appcatalog/v1alpha1.ServiceReference"),
+							Ref:         ref("github.com/tekliner/custom-resources/apis/appcatalog/v1alpha1.ServiceReference"),
 						},
 					},
 					"insecureSkipTLSVerify": {
@@ -13452,7 +13452,7 @@ func schema_custom_resources_apis_appcatalog_v1alpha1_ClientConfig(ref common.Re
 			},
 		},
 		Dependencies: []string{
-			"kmodules.xyz/custom-resources/apis/appcatalog/v1alpha1.ServiceReference"},
+			"github.com/tekliner/custom-resources/apis/appcatalog/v1alpha1.ServiceReference"},
 	}
 }
 

@@ -21,8 +21,8 @@ package v1alpha1
 import (
 	serializer "k8s.io/apimachinery/pkg/runtime/serializer"
 	rest "k8s.io/client-go/rest"
-	v1alpha1 "kmodules.xyz/custom-resources/apis/appcatalog/v1alpha1"
-	"kmodules.xyz/custom-resources/client/clientset/versioned/scheme"
+	v1alpha1 "github.com/tekliner/custom-resources/apis/appcatalog/v1alpha1"
+	"github.com/tekliner/custom-resources/client/clientset/versioned/scheme"
 )
 
 type AppcatalogV1alpha1Interface interface {

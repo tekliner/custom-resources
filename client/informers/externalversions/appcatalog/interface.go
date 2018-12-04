@@ -19,8 +19,8 @@ limitations under the License.
 package appcatalog
 
 import (
-	v1alpha1 "kmodules.xyz/custom-resources/client/informers/externalversions/appcatalog/v1alpha1"
-	internalinterfaces "kmodules.xyz/custom-resources/client/informers/externalversions/internalinterfaces"
+	v1alpha1 "github.com/tekliner/custom-resources/client/informers/externalversions/appcatalog/v1alpha1"
+	internalinterfaces "github.com/tekliner/custom-resources/client/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to each of this group's versions.

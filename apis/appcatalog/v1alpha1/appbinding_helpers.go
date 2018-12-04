@@ -23,7 +23,7 @@ func (p AppBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefi
 		Labels: crdutils.Labels{
 			LabelsMap: map[string]string{"app": "catalog"},
 		},
-		SpecDefinitionName:      "kmodules.xyz/custom-resources/apis/appcatalog/v1alpha1.AppBinding",
+		SpecDefinitionName:      "github.com/tekliner/custom-resources/apis/appcatalog/v1alpha1.AppBinding",
 		EnableValidation:        true,
 		GetOpenAPIDefinitions:   GetOpenAPIDefinitions,
 		EnableStatusSubresource: false,
